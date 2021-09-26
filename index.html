@@ -1,22 +1,102 @@
 
-    <script>
-let outdorTemp=+prompt('веедите температуру по Цельсию');
-let faringeit=(9 / 5) * outdorTemp + 32;
-alert(faringeit);
+ <script>
+// var a = 1, b = 1, c, d;
+// c = ++a; alert(c);           // 2  a увкличивается на 1 и присваевается c
+// d = b++; alert(d);           // 1 b=1 присваевается d=1, затем увелисивается на 1
+// c = (2+ ++a); alert(c);      // 5 2+ 2 увеличенное на 1, т.к в первом пункте а увеличили на 1
+// d = (2+ b++); alert(d);      // 4 2+2, затем увеличение
+// alert(a);                    // 3 а два раза увеличили на 1
+// alert(b);                    // 3 b два раза увелиили на1
 
-let a=10;
-let b=20;
-a = a + b;
-b = a - b;
-a = a - b;
-document.write(a+"<br>"+b+"<br>");
+// var a = 2;  
 
-let name="Василий";
-let admin=name;
-document.write(admin);
- 
-//100+108=100108
+// var x = 1 + (a *= 2); x=1+(a=a*2)=5
 
 
+function arifmetic(a,b){
+    if (a>=0&&b>=0){
+        return a-b
+    }
+    if (a<0&&b<0){
+        return a*b
+    }
+    if (a>0&&b<0||a<0&&b>0){
+        return a+b
+    }
+}
+console.log(arifmetic(-2,-3));
 
-    </script>
+
+let a=2;
+switch (a){
+    case 0:console.log (0);
+    case 1:console.log (1);
+    case 2:console.log (2);
+    case 3:console.log (3);
+    case 4:console.log (4);
+    case 5:console.log (5);
+    case 6:console.log (6);
+    case 7:console.log (7);
+    case 8:console.log (8);
+    case 9:console.log (9);
+    case 10:console.log (10);
+    case 11:console.log (11);
+    case 12:console.log (12);
+    case 13:console.log (13);
+    case 14:console.log (14);
+    case 15:console.log (15);
+
+};
+
+function summ(a,b){
+    return a+b
+};
+console.log(summ (2,3));
+
+function subtraction(a,b){
+    return a-b
+};
+console.log(subtraction (2,3));
+
+function division(a,b){
+    return a/b
+};
+console.log(division (2,3));
+
+function multiplication (a,b){
+return a*b
+}
+console.log(multiplication(4,5));
+
+
+function mathOperation(arg1, arg2, operation){
+if (operation==="+"){
+    return summ(arg1,arg2)
+}
+if(operation==="-"){
+    return subtraction(arg1,arg2)
+}
+if(operation==="/"){
+    return division(arg1,arg2)
+}
+if(operation==="*"){
+    return multiplication(arg1,arg2)
+}
+}
+console.log(mathOperation(3,3,"*"))
+
+console.log(null===0);//false ноль это число, null отсутствие чего либо
+
+
+function power(val,pow,chesk){ //не додумался  
+         
+      if (chesk===pow){
+          return val
+      }  
+   power(val*val,pow,chesk+1)
+   
+}
+
+console.log(power (2,3,0));
+
+</script>
