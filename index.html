@@ -1,106 +1,49 @@
+<script>
+let i=1;
+while(i<=100){ 
+          let numb=0
+          let z=1;
+    while(z<=i){        
+        let count=i%z;
+        if (count==0){
+            numb++
+        }
+         z++;} 
+    if (numb==2){
+        console.log(i)
+  }      
+ i++;      
+}
 
- <script>
-// var a = 1, b = 1, c, d;
-// c = ++a; alert(c);           // 2  a увкличивается на 1 и присваевается c
-// d = b++; alert(d);           // 1 b=1 присваевается d=1, затем увелисивается на 1
-// c = (2+ ++a); alert(c);      // 5 2+ 2 увеличенное на 1, т.к в первом пункте а увеличили на 1
-// d = (2+ b++); alert(d);      // 4 2+2, затем увеличение
-// alert(a);                    // 3 а два раза увеличили на 1
-// alert(b);                    // 3 b два раза увелиили на1
-
-// var a = 2;  
-
-// var x = 1 + (a *= 2); x=1+(a=a*2)=5
-
-
-function arifmetic(a,b){
-    if (a>=0&&b>=0){
-        return a-b
+let basket=[
+    {title:"shit",
+    price:1200,
+    count:3
+    },
+    {title:"jeans",
+    price:4000,
+    count:2
+    },
+    {title:"switshot",
+    price:5000,
+    count:5
     }
-    if (a<0&&b<0){
-        return a*b
-    }
-    if (a>0&&b<0||a<0&&b>0){
-        return a+b
-    }
+];
+function countBasketPrice(){
+    let summ=0
+    for(i=0;i<basket.length;i++){
+        summ=basket[i].price+summ
+       } 
+       return summ
 }
-console.log(arifmetic(-2,-3));
+console.log(countBasketPrice());
 
-
-let a=2;
-switch (a){
-    case 0:console.log (0);
-    case 1:console.log (1);
-    case 2:console.log (2);
-    case 3:console.log (3);
-    case 4:console.log (4);
-    case 5:console.log (5);
-    case 6:console.log (6);
-    case 7:console.log (7);
-    case 8:console.log (8);
-    case 9:console.log (9);
-    case 10:console.log (10);
-    case 11:console.log (11);
-    case 12:console.log (12);
-    case 13:console.log (13);
-    case 14:console.log (14);
-    case 15:console.log (15);
-
-};
-
-function summ(a,b){
-    return a+b
-};
-console.log(summ (2,3));
-
-function subtraction(a,b){
-    return a-b
-};
-console.log(subtraction (2,3));
-
-function division(a,b){
-    return a/b
-};
-console.log(division (2,3));
-
-function multiplication (a,b){
-return a*b
-}
-console.log(multiplication(4,5));
-
-
-function mathOperation(arg1, arg2, operation){
-if (operation==="+"){
-    return summ(arg1,arg2)
-}
-if(operation==="-"){
-    return subtraction(arg1,arg2)
-}
-if(operation==="/"){
-    return division(arg1,arg2)
-}
-if(operation==="*"){
-    return multiplication(arg1,arg2)
-}
-}
-console.log(mathOperation(3,3,"*"))
-
-console.log(null===0);//false ноль это число, null отсутствие чего либо
-
-
-function power(val,pow){ 
-         
-      if (pow==1){
-          return val;
-      } 
-      else{
-          return val*power(val,pow-1)
-
-      } 
-
-   
+for(i=0;i<=9;i++) console.log(i) ;
+let string=""
+for(i=0;i<=20;i++){
+string=string+"x";
+console.log(string);
 }
 
-console.log(power (2,3));
 
 </script>
