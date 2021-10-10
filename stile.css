@@ -1,0 +1,41 @@
+.ches{
+ 
+    display: flex;
+    width: 320px;
+    flex-wrap: wrap;
+    border:2px solid red
+   
+}
+.inside{
+    width: 40px;
+    height: 32px;
+    color:red;
+    text-align: center;
+    align-items: center;
+    padding-top:8px
+}
+  
+    
+
+.external{
+    display: flex;
+    width: 357px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.numbers__inside{  
+   background-size:contain;
+    width: 30px;
+
+
+    text-align:center;
+    padding-top:14px;
+    padding-bottom: 9px;
+}
+.letter{
+    display: flex;
+    margin-left: 15px;
+}
+.letter__inside{
+    padding-left: 30px;
+}

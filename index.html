@@ -1,49 +1,81 @@
-<script>
-let i=1;
-while(i<=100){ 
-          let numb=0
-          let z=1;
-    while(z<=i){        
-        let count=i%z;
-        if (count==0){
-            numb++
-        }
-         z++;} 
-    if (numb==2){
-        console.log(i)
-  }      
- i++;      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+    <script>
+        const external=document.createElement('div')
+        external.classList.add('external')
+       let chesDesk=document.createElement('div')
+       const body=document.body;
+       body.appendChild(external);
+       external.appendChild(chesDesk)
+       chesDesk.classList.add('ches');
+       
+       for(i=1;i<=64;i++){
+                chesDesk.insertAdjacentHTML("afterBegin",'<div class=inside></div>')  
+              
+           } 
+ let chees=document.getElementsByClassName("inside");
+
+
+    
+
+
+
+for(i=0;i<=chees.length;i++){
+    if (i%2==0&&i<8||i%2==0&&i>=16&&i<23||i%2==0&&i>=32&&i<40||i%2==0&&i>=48&&i<56){
+        chees[i].style.background="black"
+    }else if(i%2!=0&&i>8&&i<16||i%2!=0&&i>23&&i<32||i%2!=0&&i>40&&i<48||i%2!=0&&i>56&&i<64){
+        chees[i].style.background="black"      
+        
+    }   
+}
+for(i=0;i<=chees.length;i++){
+    if(i==0||i==7||i==56||i==63){
+        chees[i].innerText="Л"}
+    else if(i>7&&i<16||i>47&&i<56){
+        chees[i].innerText="П";      
+    }  
+    else if(i==1||i==6||i==57||i==62){
+        chees[i].innerText="К"; 
+    }  
+    else if(i==2||i==5||i==58||i==61){
+        chees[i].innerText="С"; }
+        else if(i==3||i==60){
+        chees[i].innerText="К";} 
+        else if(i==4||i==59){
+        chees[i].innerText="Ф";} 
+    }    
+    
+ 
+
+const numbers=document.createElement('div')
+numbers.classList.add('numb')
+chesDesk.before(numbers)
+let array=[,'A','B','C','D','E','F','G','H'] 
+const letter=document.createElement('div')
+letter.classList.add('letter')
+chesDesk.after(letter)
+for (i=1;i<=8;i++){
+numbers.insertAdjacentHTML("afterbegin","<div class=numbers__inside>"+i+"</div>");
+letter.insertAdjacentHTML("afterbegin","<div class=letter__inside>"+array[i]+"</div>");
 }
 
-let basket=[
-    {title:"shit",
-    price:1200,
-    count:3
-    },
-    {title:"jeans",
-    price:4000,
-    count:2
-    },
-    {title:"switshot",
-    price:5000,
-    count:5
-    }
-];
-function countBasketPrice(){
-    let summ=0
-    for(i=0;i<basket.length;i++){
-        summ=basket[i].price+summ
-       } 
-       return summ
-}
-console.log(countBasketPrice());
 
-for(i=0;i<=9;i++) console.log(i) ;
-let string=""
-for(i=0;i<=20;i++){
-string=string+"x";
-console.log(string);
-}
+  
 
 
-</script>
+
+  
+        
+
+    </script>
+</body>
+</html>
